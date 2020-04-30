@@ -1,0 +1,149 @@
+.overlay {
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    transition: .3s;
+}
+
+/* Site header start */
+.headerDiv {
+    background-color: #3445b4;
+    position: fixed;
+    width: 100vw;
+    height: 6.6vh;
+    z-index: 99;
+    text-align: left;
+}
+
+.mainHeader {
+    color: #fff;
+    margin-left: 50px;
+    font-size: 26px;
+    line-height: 58px;
+}
+
+.headerDivAlert {
+    position: absolute;
+    width: 18vw;
+    height: 6.6vh;
+    text-align: center;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+    color: #fff;
+    line-height: 58px;
+}
+
+.notificationDropdown {
+    width: 60vw;
+}
+
+.notificationBtn, .notificationBtn:hover {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+/* Site header end */
+
+/* Site content start */
+.mainContainer {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding-top: 70px;
+    margin-bottom: 100px;
+}
+
+.walletDiv, .expansesDiv, .incomesDiv {
+    width: 95vw;
+    height: 15vh;
+    margin: 0 auto;
+    background-color: #1E78C8;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+.walletDiv .walletIcon, .expansesDiv .expansesIcon, .incomesDiv .incomesIcon, .categoriesDiv .expansesIcon {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 5;
+    left: 3;
+}
+
+.walletDiv span i, .expansesDiv span i, .incomesDiv span i, .expansesIcon i {
+    color: #52C81E;
+}
+
+    .incomesCashDiv, .walletCashDiv, .expansesCashDiv {
+        position: absolute; 
+        bottom: 0; 
+        right: 0;
+        margin-right: 10px;
+        margin-bottom: 5px;
+    }
+
+    .walletCash, .incomesCash {
+        font-size: 34px;
+        color: #fff;
+        margin-right: 0;
+        margin-bottom:  0;
+        background-color: #52C81E;
+        border-radius: 8px;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .expansesCash {
+        font-size: 34px;
+        color: #fff;
+        margin-right: 0;
+        margin-bottom:  0;
+        background-color: #E49A05;
+        border-radius: 8px;
+        padding: 5px 10px 5px 10px;
+    }
+
+.categoriesDiv {
+    width: 95vw;
+    height: auto;
+    padding: 5px 10px 5px 10px;
+    background-color: #1E78C8;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.categoriesItems {
+    color: #fff;
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 0 5px 0 5px;
+}
+
+.categoriesItems {
+    color: white;
+    line-height: 1.6;
+}
+
+.categoriesItems p span {
+    background-color: #52C81E;
+    padding: 2px 5px 2px 5px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.categoriesItems p i {
+    text-align: center;
+    margin-right: 15px;
+    width: 20px;
+}
+/* Site content end */

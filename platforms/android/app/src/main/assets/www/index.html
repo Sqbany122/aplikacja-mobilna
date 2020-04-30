@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+        <title>Manage Your Cash</title>
+    </head>
+    <body>
+        <div class="app">
+          <nav id="sidebar">
+            <div class="custom-menu">
+              <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                <i class="fas fa-bars"></i>
+                <span class="sr-only">Toggle Menu</span>
+              </button>
+            </div>
+            <div class="p-4">
+              <h1><a href="index.html" class="logo">MYC <span>Manage Your Cash</span></a></h1>
+              <ul class="list-unstyled components mb-5">
+                <li class="active">
+                  <a href="#"><span  class="fas fa-wallet mr-2"></span>Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fas fa-coins mr-2"></span>Incomes</a>
+                </li>
+                <li>
+                  <a href="#"><span class="fas fa-search-dollar mr-2"></span>Expenses</a>
+                </li>
+                <li>
+                  <a href="#"><span class="fas fa-info-circle mr-2"></span>About app</a>
+                </li>
+                <li>
+                  <a href="#"><span class="fas fa-sliders-h mr-2"></span>Settings</a>
+                </li>
+                <li>
+                  <a href="#"><span class="fa fa-paper-plane mr-2"></span>Contact</a>
+                </li>
+              </ul>    
+            </div>
+          </nav>
+          <div id="overlay" class=""></div>
+
+         <div class="headerDiv">
+            <span class="mainHeader">Dashboard</span>
+            <div class="headerDivAlert">
+              <div class="dropdown">
+                <button class="btn notificationBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell"></i>
+                </button>
+                <div class="dropdown-menu notificationDropdown" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainContainer">
+
+            <div class="walletDiv">
+              <span class="walletIcon"><i class="fas fa-circle"></i> Available funds</span>
+              <div style="clear:both;"></div>
+              <div class="walletCashDiv">
+                <span class="walletCash">2000zł</span>
+            </div>
+            </div>
+
+            <div class="incomesDiv">
+              <span class="incomesIcon"><i class="fas fa-circle"></i> Incomes (April)</span>
+              <div class="incomesCashDiv">
+                <span class="incomesCash">+432zł</span>
+              </div>
+            </div>
+
+            <div class="expansesDiv">
+              <span class="expansesIcon"><i class="fas fa-circle"></i> Expanses (April)</span>
+              <div class="expansesCashDiv">
+                <span class="expansesCash">-982zł</span>
+              </div>
+            </div>
+
+            <div class="categoriesDiv">
+              <span class="expansesIcon"><i class="fas fa-circle"></i> Expanses categories</span>
+              <div class="categoriesItems">
+                <p><i class="fas fa-utensils"></i>Gastronomy<span>76,35zł</span></p>
+                <p><i class="fas fa-plug"></i>Electronics<span>234,56zł</span></p>
+                <p><i class="fas fa-bus"></i>Transport<span>345,89zł</span></p>
+                <p><i class="fas fa-cocktail"></i>Entertainment <span>12,34zł</span></p>
+                <p><i class="fas fa-file-invoice"></i>Bills<span>123,23zł</span></p>
+                <p><i class="fas fa-running"></i>Sport<span>56,23zł</span></p>
+                <p><i class="fas fa-tshirt"></i>Clothes<span>150,25zł</span></p>
+                <p><i class="fas fa-heartbeat"></i>Health<span>20,25zł</span></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <script src="./js/jquery-3.4.1.slim.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
